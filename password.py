@@ -98,6 +98,8 @@ def mixed_alpha():
     unshuffled_pw = num_choice_mixed() + char_choice_mixed() + cap_char_choice_mixed() + sym_choice_mixed()
     shuffled_pw = ''.join(random.sample(unshuffled_pw,len(unshuffled_pw)))
     print(shuffled_pw)
+    with open('passwordgeneration.txt', 'a') as password:
+        password.write(shuffled_pw)
 
 def sin_alpha(sin_choice):
     if choice == '1':
